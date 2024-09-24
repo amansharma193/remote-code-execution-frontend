@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Online Code Execution Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This project is an Online Code Execution Platform that allows users to run code snippets in various programming languages (Java, C++, JavaScript, Python) securely. Users can input their code along with any necessary user inputs, and the platform returns the output. The architecture is designed to handle multiple requests efficiently while ensuring that the code execution environment is isolated and secure.
 
-## Available Scripts
+## Tech Stack
+- **Frontend**: React.js for building an interactive user interface.
+- **Backend**: Node.js, running on AWS Lambda for scalable serverless computing.
+- **Containerization**: Docker for packaging applications and dependencies to ensure consistency across different environments.
+- **Additional Tools**: 
+  - `child_process` for spawning child processes to execute code snippets.
+  - `tmp` for secure temporary file handling.
 
-In the project directory, you can run:
+## Importance and Speciality
+1. **Safety and Security**: 
+   - **Sandboxing**: The backend employs isolated environments for executing code. Each execution is contained within a temporary directory created dynamically, ensuring that no malicious code affects the underlying system.
+   - **Timeouts**: Implemented process timeouts prevent infinite loops or excessive resource consumption.
+   - **Error Handling**: Comprehensive error handling ensures that any issues during code execution do not crash the system, providing informative feedback to users.
+   - **Input Validation**: Only specific programming languages are allowed for execution, reducing the risk of unauthorized commands.
 
-### `npm start`
+2. **Scalability**: 
+   - Utilizing **AWS Lambda** allows the application to automatically scale based on incoming requests, ensuring that the service remains available under varying loads.
+   - Docker containers streamline the deployment process and guarantee that the code runs consistently across different environments, from local development to production.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **User Experience**: 
+   - A responsive and interactive frontend built with React.js provides a seamless user experience. Users can easily input their code, view outputs, and interact with the application without delays.
+   - Real-time output feedback ensures users can quickly iterate on their code, enhancing the learning experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+This Online Code Execution Platform not only showcases proficiency in modern web development practices but also emphasizes the importance of security and performance in backend development. By leveraging technologies like AWS Lambda and Docker, the project is both robust and scalable, ready to serve users efficiently.
